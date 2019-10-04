@@ -17,18 +17,18 @@ function setChoice()
   {
     for(let i = 0; i < instructorArray.length; i++)
     {
-      console.log(greeting + instructorArray[i] + "!");
+      para.innerHTML += greeting + instructorArray[i] + "!" + "<br>";
     }
   }//if instructor
   else if(choice === "student")
   {
     for(let i = 0; i < studentArray.length; i++)
     {
-      console.log(greeting + studentArray[i] + "!");
+      para.innerHTML += greeting + studentArray[i] + "!" + "<br>";
     }
   }
   else
   {
-    para.textContent = "Please make a selection."
+    para.textContent = "Please make a selection.";
   }
 }//end of setChoice()

@@ -11,6 +11,7 @@ select.onchange = setChoice;
 //define setChoice() function
 function setChoice()
 {
+  clearPara();
   var choice = select.value;
 
   if(choice === "instructor")
@@ -32,3 +33,7 @@ function setChoice()
     para.textContent = "Please make a selection.";
   }
 }//end of setChoice()
+
+function clearPara(){
+  para.innerHTML = " ";
+}

@@ -1,0 +1,23 @@
+/* CSS Document */
+@charset "UTF-8";
+
+body {
+  font-family: 'Dekko';
+  text-align: center;
+  background-color: #379683;
+  color: #05386B;
+}
+
+.wrapper{
+  background-color: #5CDB95;
+  padding: 50px;
+  padding-top: 10px;
+  margin: 20px;
+  margin-left: 450px;
+  width: 500px;
+}
+
+h1{
+  text-shadow: 3px 2px #EDF5E1;
+  font-size: 50px;
+}

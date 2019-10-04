@@ -1,11 +1,12 @@
 //declaring variables + arrays
 let select = document.getElementById("welcome");
-let para = document.querySelector('p');
+let para = document.querySelector("p");
+let greeting = "Hello ";
 let instructorArray = ["Jessica Gilfillan", "Maziar Shajari", "Ben Blanc", "Susy Stewart", "Samuel Halloran", "Tim Patrick"];
 let studentArray = ["Jeff Grant", "Vraj Patel", "Gagandeep Kaur", "Patrick Gareau", "Kuei-Chin Huang", "Nicole Yaghoobi", "Birhanu Bishaw", "Scott Baron", "Linh Dao", "Alap Dhruva", "Manuel Gonzalez", "Tyler Auslitz", "Shinhee Kim", "Nadine Paquette", "Nix Thompson", "Taylor Gamsby", "Jason Asselin", "Giuseppe Leone", "Zixiao Sun", "Mitch Haak", "Joel Grenier", "Andrew Arpin", "Chengbin Huang", "Kurtis Jones", "Jakob Clements", "Nadia Corkum"];
 
 //using onchange to detect a change
-select.onchange = setChoice();
+select.onchange = setChoice;
 
 //define setChoice() function
 function setChoice()
@@ -14,15 +15,20 @@ function setChoice()
 
   if(choice === "instructor")
   {
-    para.textContent = "You've chosen Instructor!"
-  }
+    for(let i = 0; i < instructorArray.length; i++)
+    {
+      para.innerHTML += greeting + instructorArray[i] + "!" + "<br>";
+    }
+  }//if instructor
   else if(choice === "student")
   {
-    para.textContent = "You've chosen Student!"
-  }
+    for(let i = 0; i < studentArray.length; i++)
+    {
+      para.innerHTML += greeting + studentArray[i] + "!" + "<br>";
+    }
+  }//else if student
   else
   {
-    para.textContent = "Something went wrong :()"
+    para.textContent = "Please make a selection.";
   }
-  return "this";
 }//end of setChoice()

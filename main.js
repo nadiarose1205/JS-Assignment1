@@ -12,6 +12,7 @@ select.onchange = setChoice;
 function setChoice()
 {
   clearPara();
+
   var choice = select.value;
 
   if(choice === "instructor")
@@ -34,6 +35,7 @@ function setChoice()
   }
 }//end of setChoice()
 
+//clears para.innerHTMl - clears the instructor list to make room for the student list and vice versa
 function clearPara(){
   para.innerHTML = " ";
-}
+}//end of clearPara
